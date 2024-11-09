@@ -29,9 +29,14 @@ button {
   border: none;
   margin-bottom: 45px;
 
-  background: var(--primary);
+  background: var(--primary) !important;
 
   font-size: var(--text-small);
+}
+
+.login-button:focus,
+.login-button:hover {
+  background: var(--primary);
 }
 /*? Laptop screen ?*/
 @media (min-width: 769px) {
