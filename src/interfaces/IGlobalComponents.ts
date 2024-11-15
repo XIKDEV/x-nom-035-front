@@ -2,16 +2,6 @@ export interface IUiConstants {
   inputQuickSearchPlaceholder: string;
 }
 
-export interface IInputFormsStyle {
-  boxShadow: string;
-  borderColor: string;
-  width: string;
-}
-
-export interface IFormsButtonsStyles {
-  color: string;
-}
-
 export interface IFormItemInputProps {
   name: NameType;
   rules?: IRules[];

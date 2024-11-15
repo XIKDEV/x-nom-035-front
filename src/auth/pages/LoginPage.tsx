@@ -4,7 +4,6 @@ import { useScreenSize } from "../../hooks";
 import { authConstants } from "../../constants/authConstants";
 import { loginButton } from "../ui";
 import "../ui/loginPage.css";
-import Password from "antd/es/input/Password";
 
 export const LoginPage = () => {
   const { isMobile } = useScreenSize();

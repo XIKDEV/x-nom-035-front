@@ -7,10 +7,13 @@ import { loginInput } from "../../auth/ui/styles";
 export const FormItemInputPassword = () => {
   return (
     <Form.Item<IFormFieldLogin>
-      // Crear Y Utilizar: IFormFieldUsers | IFormFieldEnterprises
       name="password"
       style={{ marginBottom: "0px" }}
-      rules={[{ required: true, message: authConstants.passwordWarning }]}
+      rules={[
+        { required: true, message: authConstants.passwordWarning },
+        { min: 8, message: authConstants.passwordWarningMin },
+      ]}
+      validateTrigger="onSubmit"
     >
       <Input.Password
         type="password"

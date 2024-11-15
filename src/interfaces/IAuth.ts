@@ -8,6 +8,7 @@ export interface IAuthConstants {
   emailWarning: string;
   emailWrongFormat: string;
   passwordWarning: string;
+  passwordWarningMin: string;
 }
 
 export interface IFormFieldLogin {

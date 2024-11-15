@@ -10,4 +10,5 @@ export const authConstants: IAuthConstants = {
   emailWarning: "Ingresa tu email",
   emailWrongFormat: "Ingrese email válido",
   passwordWarning: "Ingresa tu contraseña",
+  passwordWarningMin: "La contraseña debe tener al menos 8 caracteres",
 };

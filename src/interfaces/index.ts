@@ -1,2 +1,4 @@
 export * from "./IAuth";
-export * from "./IUI";
+export * from "./IUi";
+export * from "./IStyles";
+export * from "./IGlobalComponents";
