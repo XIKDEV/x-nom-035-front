@@ -17,8 +17,7 @@ export interface IFormItemSelectProps {
 }
 
 export interface IRules {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pattern?: any;
+  pattern?: RegExp;
   max?: number;
   type?: RulesType;
   message: string;
