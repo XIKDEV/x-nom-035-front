@@ -1,0 +1,54 @@
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: no-repeat center url("../../../public/subtle-prism.png");
+  background-size: cover;
+}
+.login-form {
+  width: calc(100% - 60px);
+  height: 68%;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--dark);
+}
+
+.logo {
+  width: 124px;
+  height: 124px;
+  margin-top: 46px;
+}
+.login-inputs {
+  width: calc(100% - 50px);
+}
+
+/** Laptop screen **/
+@media (min-width: 769px) {
+  .login {
+    justify-content: end;
+  }
+  .logo {
+    width: 186px;
+    height: 186px;
+    margin: 0px;
+  }
+  .login-form {
+    width: min(50%, 476px);
+    height: 100vh;
+    border-radius: 0px;
+
+    justify-content: space-around;
+
+    color: var(--gray);
+  }
+  .login-inputs {
+    width: calc(100% - 96px);
+  }
+}

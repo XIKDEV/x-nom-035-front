@@ -1,48 +1,41 @@
-import {
-  ICardMetaStyle,
-  ICardMobileBodyStyles,
-  IFormsButtonsStyles,
-  IFormsDrawerStyles,
-  IHeaderFormsDrawerStyles,
-  IInputFormsStyle,
-} from '../../interfaces';
+import { IGlobalStyle } from "../../interfaces";
 
-export const cardMobileBodyStyles: ICardMobileBodyStyles = {
+export const cardMobileBodyStyles: IGlobalStyle = {
   padding: 0,
-  height: '100%',
-  display: 'flex',
-  alignItems: 'center',
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
 };
 
-export const cardMetaStyle: ICardMetaStyle = {
+export const cardMetaStyle: IGlobalStyle = {
   title: {
-    fontSize: 'var(--text)',
+    fontSize: "var(--text)",
   },
   titleMobile: {
-    fontSize: 'var(--text-small)',
+    fontSize: "var(--text-small)",
   },
   description: {
-    fontSize: 'var(--subtext)',
+    fontSize: "var(--subtext)",
   },
   descriptionMobile: {
-    fontSize: 'var(--subtext-small)',
+    fontSize: "var(--subtext-small)",
   },
 };
 
-export const formsDrawerStyles: IFormsDrawerStyles = {
-  background: 'var(--gray)',
+export const formsDrawerStyles: IGlobalStyle = {
+  background: "var(--gray)",
 };
 
-export const headerFormsDrawerStyles: IHeaderFormsDrawerStyles = {
-  border: 'none',
+export const headerFormsDrawerStyles: IGlobalStyle = {
+  border: "none",
 };
 
-export const inputFormsStyle: IInputFormsStyle = {
-  boxShadow: 'none',
-  borderColor: 'var(--primary)',
-  width: '100%',
+export const inputFormsStyle: IGlobalStyle = {
+  boxShadow: "none",
+  borderColor: "var(--primary)",
+  width: "100%",
 };
 
-export const formsButtonsStyles: IFormsButtonsStyles = {
-  color: 'var(--gray)',
+export const formsButtonsStyles: IGlobalStyle = {
+  color: "var(--gray)",
 };
