@@ -1,0 +1,26 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+#
+# To use this workflow, you will need to set up a .github/labeler.yml
+# file with configuration.  For more information, see:
+# https://github.com/actions/labeler
+
+name: Check Draft
+on:
+  pull_request:
+#    branches:
+#      - main
+    types:
+      - opened
+      - labeled
+      - unlabeled
+
+jobs:
+  fail-for-draft:
+    if: contains(github.event.pull_request.labels.*.name, 'draft')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if PR is a draft
+        run: |
+          echo "This PR is currently a draft."
+          exit 1
