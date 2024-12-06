@@ -1,12 +1,17 @@
-import { Button, Form } from "antd";
-import { FormItemInput, FormItemInputPassword } from "../../ui/components";
-import { useScreenSize } from "../../hooks";
-import { authConstants } from "../../constants/authConstants";
-import { loginButton } from "../ui";
-import "../ui/loginPage.css";
+import { Button, Form } from 'antd';
+import { FormItemInput, FormItemInputPassword } from '../../ui/components';
+import { useScreenSize } from '../../hooks';
+import { authConstants } from '../../constants/authConstants';
+import { loginButton } from '../ui';
+import '../ui/loginPage.css';
+import { loginMutation } from '../../stores/auth/thunks';
 
 export const LoginPage = () => {
   const { isMobile } = useScreenSize();
+
+  const mutation = loginMutation();
+
+  console.log(mutation);
 
   return (
     <>
@@ -14,9 +19,9 @@ export const LoginPage = () => {
         <Form
           name="login"
           className="login-form"
-          initialValues={{ email: "", password: "" }}
+          initialValues={{ email: '', password: '' }}
           onFinish={(values) => {
-            console.log(values);
+            mutation.mutate(values);
           }}
         >
           <img
@@ -30,7 +35,7 @@ export const LoginPage = () => {
               placeholder={authConstants.placeholderEmail}
               rules={[
                 {
-                  type: "email",
+                  type: 'email',
                   message: authConstants.emailWrongFormat,
                 },
               ]}
@@ -42,7 +47,7 @@ export const LoginPage = () => {
 
           <Form.Item
             style={{
-              width: isMobile ? "calc(100% - 50px)" : "calc(100% - 96px)",
+              width: isMobile ? 'calc(100% - 50px)' : 'calc(100% - 96px)',
             }}
           >
             <Button
