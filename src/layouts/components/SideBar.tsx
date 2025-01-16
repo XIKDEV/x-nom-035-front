@@ -50,25 +50,17 @@ export const SideBar: FC<ISideBarProps> = ({
         data-testid="sider-navigation"
       >
         <ButtonSidebar
-          onClick={
-            isMobile
-              ? handleSidebar
-              : () => {
-                  console.log("user page");
-                }
-          }
+          onClick={() => {
+            console.log("user page");
+          }}
           textBttn={layoutConstants.users}
           icon={faUser}
           isCollapse={isCollapse}
         />
         <ButtonSidebar
-          onClick={
-            isMobile
-              ? handleSidebar
-              : () => {
-                  console.log("enterprise page");
-                }
-          }
+          onClick={() => {
+            console.log("enterprise page");
+          }}
           textBttn={layoutConstants.enterprises}
           icon={faBuilding}
           isCollapse={isCollapse}

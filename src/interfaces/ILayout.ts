@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { IGlobalProps } from "./IGlobalProps";
 
 export interface ILayoutConstants {
   enterprises: string;
@@ -15,15 +16,12 @@ export type ILayoutHandleSidebar = {
   handleSidebar: () => void;
 };
 
-export interface IButtonSidebarProps {
+export interface IButtonSidebarProps extends IGlobalProps {
   onClick: () => void;
   textBttn: string;
   icon: IconDefinition;
-  isCollapse: boolean;
 }
 
-export interface ISideBarProps {
-  isMobile: boolean;
-  isCollapse: boolean;
+export interface ISideBarProps extends IGlobalProps {
   handleSidebar: () => void;
 }
