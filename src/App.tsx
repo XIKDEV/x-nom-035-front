@@ -1,9 +1,10 @@
-import { LoginPage } from "./auth/pages";
+import { LayoutMainPage } from "./layouts/pages";
+import { UsersPage } from "./users/pages";
 
 function App() {
   return (
     <>
-      <LoginPage />
+      <LayoutMainPage page={UsersPage} />
     </>
   );
 }
